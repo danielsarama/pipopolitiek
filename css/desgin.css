@@ -1,0 +1,87 @@
+:root {
+    --backGround_Color: linear-gradient(90deg,red,orange,yellow,green,blue,purple)
+}
+
+.title {
+    text-align: center;
+    font-size: 5vh;
+    color: white;
+    padding: 5px;
+
+}
+footer{
+    text-align: center;
+    width: 100%;
+    background-color: green;
+    color: white;
+    font-size: larger;
+    padding: 5px;
+
+    
+}
+.start_button {
+    border-width: 15px;
+    border-radius: 30px;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    margin-top: 650px;
+    backdrop-filter: blur(2px);
+    box-shadow: 5px 10px 20px black;
+}
+header{
+    background-color: green;
+    width: 100%;
+}
+main{
+    justify-content: center;
+  
+    position: relative;
+    height: 90vh;
+}
+*{
+    margin: 0  ;
+    font-style: italic;
+    font-weight: bold;
+}
+body{
+    overflow: hidden;
+    background-image: url('gaga.jpg');
+    background-size: cover;
+    
+}
+.welcome_messege{
+    border-color: black;
+    border-width: 15px;
+    border-radius: 30px;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    margin-top: 50px;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 10px 20px black;
+}
+.fuck{
+   margin: 30px;
+   font-size: larger;
+   color: white;
+}
+.welcome_messege_2{
+    border-color: black;
+    border-width: 15px;
+    border-radius: 30px;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    margin-top: 410px;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 10px 20px black;
+}
+.second_screen{
+    background-color: black;
+    display: none;
+
+}
