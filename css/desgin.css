@@ -30,13 +30,27 @@ footer{
     backdrop-filter: blur(2px);
     box-shadow: 5px 10px 20px black;
 }
+.back_button {
+    border-width: 15px;
+    border-radius: 30px;
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    translate: -50%;
+    margin-top: 650px;
+    backdrop-filter: blur(2px);
+    box-shadow: 5px 10px 20px black;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
 header{
     background-color: green;
     width: 100%;
 }
 main{
     justify-content: center;
-  
     position: relative;
     height: 90vh;
 }
@@ -47,7 +61,7 @@ main{
 }
 body{
     overflow: hidden;
-    background-image: url('gaga.jpg');
+    background-image: url('../img/gaga.jpg');
     background-size: cover;
     
 }
