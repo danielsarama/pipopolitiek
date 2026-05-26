@@ -10,7 +10,7 @@
 
 body {
     overflow: hidden;
-    background-image: url('../img/gaga.jpg');
+    background-image: url('../css/gaga.jpg');
     background-size: cover;
 }
 
@@ -92,59 +92,6 @@ footer {
     font-size: 25px;
     cursor: pointer;
 }
-<<<<<<< Updated upstream
-header{
-    background-color: green;
-    width: 100%;
-}
-main{
-    justify-content: center;
-  
-    position: relative;
-    height: 90vh;
-}
-*{
-    margin: 0  ;
-    font-style: italic;
-    font-weight: bold;
-}
-body{
-    overflow: hidden;
-    background-image: url('gaga.jpg');
-    background-size: cover;
-    
-}
-.welcome_messege{
-    border-color: black;
-    border-width: 15px;
-    border-radius: 30px;
-    width: 80%;
-    position: absolute;
-    left: 50%;
-    translate: -50%;
-    margin-top: 50px;
-    backdrop-filter: blur(10px);
-    box-shadow: 5px 10px 20px black;
-}
-.fuck{
-   margin: 30px;
-   font-size: larger;
-   color: white;
-}
-.welcome_messege_2{
-    border-color: black;
-    border-width: 15px;
-    border-radius: 30px;
-    width: 80%;
-    position: absolute;
-    left: 50%;
-    translate: -50%;
-    margin-top: 410px;
-    backdrop-filter: blur(10px);
-    box-shadow: 5px 10px 20px black;
-}
-.second_screen{
-=======
 
 .back_button {
     border-width: 15px;
@@ -162,7 +109,6 @@ body{
 }
 
 .second_screen {
->>>>>>> Stashed changes
     background-color: black;
     display: none;
 }
@@ -206,16 +152,25 @@ body{
     background-color: yellow;
 }
 
-#next_button {
+#next_button,
+#home_button {
     border-width: 15px;
     border-radius: 30px;
     width: 80%;
-    position: absolute;
-    left: 50%;
-    translate: -50%;
-    margin-top: 650px;
     backdrop-filter: blur(2px);
     box-shadow: 5px 10px 20px black;
     font-size: 25px;
     cursor: pointer;
+    padding: 10px;
+}
+
+#next_button {
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    margin-top: 650px;
+}
+
+#home_button {
+    margin-top: 250px;
 }
