@@ -1,5 +1,3 @@
-
-
 const questionText = document.querySelector("#question_text");
 const answersBox = document.querySelector("#answers_box");
 const nextButton = document.querySelector("#next_button");
@@ -46,6 +44,26 @@ const questions = [
     }
 ];
 
+let possible_answers = []
+
+refill();
+
+const animationElements = [questionText, answersBox];
+
+function playAnimation() {
+    animationElements.forEach(function (element, index) {
+        element.style.transition = "none";
+        element.style.opacity = "0";
+        element.style.transform = "translateY(50px)";
+
+        setTimeout(function () {
+            element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+            element.style.opacity = "1";
+            element.style.transform = "translateY(0)";
+        }, index * 100);
+    });
+}
+
 showQuestion();
 
 function showQuestion() {
@@ -54,9 +72,9 @@ function showQuestion() {
     questionText.innerHTML = questions[questionNumber].question;
 
     answersBox.innerHTML = `
-        <button class="answer_button">${questions[questionNumber].answer1}</button>
-        <button class="answer_button">${questions[questionNumber].answer2}</button>
-        <button class="answer_button">${questions[questionNumber].answer3}</button>
+        <button class="answer_button">${possible_answers[0]}</button>
+        <button class="answer_button">${possible_answers[1]}</button>
+        <button class="answer_button">${possible_answers[2]}</button>
     `;
 
     const answerButtons = document.querySelectorAll(".answer_button");
@@ -72,10 +90,18 @@ function showQuestion() {
             button.classList.add("selected_answer");
         });
     });
+
+    playAnimation();
+}
+
+function refill() {
+    
+    possible_answers = [questions[questionNumber].answer1, questions[questionNumber].answer2, questions[questionNumber].answer3].sort(()=> Math.random()- 0.5);
+    
 }
 
 nextButton.addEventListener("click", function () {
-    if (chosenAnswer === "") {
+    if (!chosenAnswer) {
         alert("Kies eerst een antwoord");
         return;
     }
@@ -87,9 +113,12 @@ nextButton.addEventListener("click", function () {
     questionNumber++;
 
     if (questionNumber < questions.length) {
+        refill();
         showQuestion();
     } else {
         questionText.innerHTML = "Klaar! Je had " + score + " van de " + questions.length + " goed.";
+
+        playAnimation();
 
         answersBox.innerHTML = `
             <button id="home_button">

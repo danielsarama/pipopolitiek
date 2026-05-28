@@ -12,6 +12,12 @@ body {
     overflow: hidden;
     background-image: url('../css/gaga.jpg');
     background-size: cover;
+    color: white;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 header {
@@ -173,4 +179,20 @@ footer {
 
 #home_button {
     margin-top: 250px;
+}
+
+#animation {
+    /* width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: block;
+    background-color: var(--hue-5);
+    opacity: 0;
+    flex: 0 0 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex: 0;
+    margin: 0;
+    padding: 0; */
 }
