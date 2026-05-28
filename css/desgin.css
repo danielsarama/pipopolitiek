@@ -1,5 +1,28 @@
 :root {
-    --backGround_Color: linear-gradient(90deg,red,orange,yellow,green,blue,purple)
+    --backGround_Color: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+}
+
+* {
+    margin: 0;
+    font-style: italic;
+    font-weight: bold;
+}
+
+body {
+    overflow: hidden;
+    background-image: url('../css/gaga.jpg');
+    background-size: cover;
+    color: white;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+header {
+    background-color: green;
+    width: 100%;
 }
 
 .title {
@@ -7,18 +30,61 @@
     font-size: 5vh;
     color: white;
     padding: 5px;
-
 }
-footer{
+
+main {
+    justify-content: center;
+    position: relative;
+    height: 90vh;
+}
+
+footer {
     text-align: center;
     width: 100%;
     background-color: green;
     color: white;
     font-size: larger;
     padding: 5px;
-
-    
 }
+
+.welcome_messege {
+    border-color: black;
+    border-width: 15px;
+    border-radius: 30px;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    margin-top: 50px;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 10px 20px black;
+    color: white;
+    padding: 20px;
+}
+
+.welcome_messege_2 {
+    border-color: black;
+    border-width: 15px;
+    border-radius: 30px;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    margin-top: 410px;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 10px 20px black;
+    color: white;
+    padding: 20px;
+}
+
+.welcome_messege h2,
+.welcome_messege p,
+.welcome_messege_2 ul {
+    margin: 30px;
+    font-size: larger;
+    color: white;
+}
+
 .start_button {
     border-width: 15px;
     border-radius: 30px;
@@ -29,7 +95,10 @@ footer{
     margin-top: 650px;
     backdrop-filter: blur(2px);
     box-shadow: 5px 10px 20px black;
+    font-size: 25px;
+    cursor: pointer;
 }
+
 .back_button {
     border-width: 15px;
     border-radius: 30px;
@@ -45,57 +114,85 @@ footer{
     align-items: center;
 }
 
-header{
-    background-color: green;
-    width: 100%;
-}
-main{
-    justify-content: center;
-    position: relative;
-    height: 90vh;
-}
-*{
-    margin: 0  ;
-    font-style: italic;
-    font-weight: bold;
-}
-body{
-    overflow: hidden;
-    background-image: url('../img/gaga.jpg');
-    background-size: cover;
-    
-}
-.welcome_messege{
-    border-color: black;
-    border-width: 15px;
-    border-radius: 30px;
-    width: 80%;
-    position: absolute;
-    left: 50%;
-    translate: -50%;
-    margin-top: 50px;
-    backdrop-filter: blur(10px);
-    box-shadow: 5px 10px 20px black;
-}
-.fuck{
-   margin: 30px;
-   font-size: larger;
-   color: white;
-}
-.welcome_messege_2{
-    border-color: black;
-    border-width: 15px;
-    border-radius: 30px;
-    width: 80%;
-    position: absolute;
-    left: 50%;
-    translate: -50%;
-    margin-top: 410px;
-    backdrop-filter: blur(10px);
-    box-shadow: 5px 10px 20px black;
-}
-.second_screen{
+.second_screen {
     background-color: black;
     display: none;
+}
 
+#question_text {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 10px 20px black;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+#answers_box {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.answer_button {
+    border-width: 10px;
+    border-radius: 30px;
+    padding: 20px;
+    font-size: 22px;
+    box-shadow: 5px 10px 20px black;
+    cursor: pointer;
+}
+
+.selected_answer {
+    background-color: yellow;
+}
+
+#next_button,
+#home_button {
+    border-width: 15px;
+    border-radius: 30px;
+    width: 80%;
+    backdrop-filter: blur(2px);
+    box-shadow: 5px 10px 20px black;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#next_button {
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    margin-top: 650px;
+}
+
+#home_button {
+    margin-top: 250px;
+}
+
+#animation {
+    /* width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: block;
+    background-color: var(--hue-5);
+    opacity: 0;
+    flex: 0 0 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex: 0;
+    margin: 0;
+    padding: 0; */
 }
